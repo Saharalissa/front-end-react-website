@@ -27,7 +27,7 @@ const AdminItems =() =>{
         description:{Item.description}
         <br></br>
         image:{Item.image}
-        {/* <Button variant="primary" >hey </Button> */}
+        <button variant="primary" >hey </button>
         </div>
        
           ))}
