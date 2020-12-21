@@ -8,20 +8,20 @@ import Homepage from './components/NavBar&homepage/homepage'
 import AddItems from './components/ListItems/addItems'
 import Sign from './components/Profile/Sign'
 import { getALLItems } from './actions';
-import { useDispatch } from 'react-redux';
-import {useSelector} from 'react-redux'
-
-
+// import { useDispatch } from 'react-redux';
+// import {useSelector} from 'react-redux'
 
 function App() {
-
   // we need to define this dispatch using hooks
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getALLItems());
-  }, [dispatch]);
+  // const dispatch = useDispatch();
+  // // now we have access to this dispatch we need to find a way where we will dispatch this action ---the best way inside use Effect  : it is like component didmount
+  // useEffect(() => {
+  //   dispatch(getALLItems());
+  // }, [dispatch]);
+
   return (
     <div>
+      
       <Router className="container">
       <div>
         <Route path="/" component={Homepage} />

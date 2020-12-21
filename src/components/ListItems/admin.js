@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { getALLItems } from '../../actions';
 import { useDispatch,useSelector } from 'react-redux';
-import {Button} from 'react-bootstrap'
+// import {Button} from 'react-bootstrap'
 // we are retreiving all the admin items 
 const AdminItems =() =>{
     // we are dipatching th state
@@ -27,7 +27,7 @@ const AdminItems =() =>{
         description:{Item.description}
         <br></br>
         image:{Item.image}
-        <Button variant="primary" >hey </Button>
+        {/* <Button variant="primary" >hey </Button> */}
         </div>
        
           ))}

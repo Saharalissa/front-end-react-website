@@ -4,9 +4,11 @@ import { useDispatch } from 'react-redux';
 import { createUser } from '../../actions/index';
 import { checkUser } from '../../actions/index';
 
+//sign up/sign in component
 const Sign = ({ currentId }) => {
+    ////this is for sign up
     const [userData, setUserData] = useState({  username: '', email: '', password: '', phoneNumber: '', location: '', image: '', iBan: ''});
-    ///////
+    ////this is for sign in
     const [savedUserData, setSavedUserData] = useState({ email: '', password: ''});
 
     const dispatch = useDispatch();
@@ -18,7 +20,7 @@ const Sign = ({ currentId }) => {
           console.log("userData",userData)       
       };
 
-      /////
+      /////sign in button
       const onSignIn = async (e) => {
         e.preventDefault();
     
