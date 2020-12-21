@@ -32,11 +32,12 @@ export const getALLItems = () => async (dispatch) => {
   //action to add a new user
   export const createUser = (user) => async (dispatch) => {
     try {
-      const {data} = await api.createUser(user);
+      const {data} = await api.createUser(user)
       dispatch({ type: "ADD", payload: user});
       console.log("DISPATCH(ADD) : ", dispatch({ type: "ADD", payload: user}))
     } catch (error) {
       console.log(error.message);
+      alert('email already exists') 
     }
   };
   
@@ -51,5 +52,6 @@ export const getALLItems = () => async (dispatch) => {
       console.log("DISPATCH(CHECK) : ", dispatch({ type: "CHECK", payload: saveduser}));
     } catch (error) {
       console.log(error.message);
+      alert('email or password is incorrect')
     }
   };
