@@ -21,21 +21,24 @@ function App() {
   //   dispatch(getALLItems());
   // }, [dispatch]);
  
-  console.log(localStorage.getItem('isAuth'))
-  const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
+  console.log(localStorage.getItem('token'))
+  const [token, setToken] = useState(localStorage.getItem('token'));
+  // const [clear, setClearToken] = useState(localStorage.removeItem('token'));
+
   return (
     <div>
       
       <Router className="container">
       <div>
         <Route path="/" component={Homepage} />
-        <ProtectedRoute path="/SellerItems" component={SellerItems} isAuth = {isAuth}/>
+        <ProtectedRoute path="/SellerItems" component={SellerItems} token = {token}/>
         <ProtectedRoute path="/AdminItems" component={AdminItems} />
         <ProtectedRoute path = "/AdminProfile"  component = {AdminProfile} />
-        <ProtectedRoute path="/SellerProfile" component={SellerProfile} isAuth = {isAuth}/>
+        <ProtectedRoute path="/SellerProfile" component={SellerProfile} token = {token}/>
         {/* <Route path="/AddItems" component={AddItems} /> */}
         <Route path="/sign" exact component={Sign} />
-        <ProtectedRoute path = "/AddItems" component = {AddItems} isAuth = {isAuth}/>
+        <ProtectedRoute path = "/AddItems" component = {AddItems} token = {token}/>
+    
       </div>
      
     </Router>

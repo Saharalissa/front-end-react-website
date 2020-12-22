@@ -51,9 +51,9 @@ export const getALLItems = () => async (dispatch) => {
       console.log(data)
         localStorage.setItem('token', data.token)
         localStorage.setItem('user_id',data.result[0].userID)
-        localStorage.setItem('isAuth', data.auth);
+        // localStorage.setItem('isAuth', data.auth);
         window.location = '/';
-      // console.log(data.token)
+        console.log(data)
       // console.log(saveduser)
     } catch (error) {
       console.log(error.message);

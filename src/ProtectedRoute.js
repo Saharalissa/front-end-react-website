@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route, Redirect} from 'react-router-dom' ;
 
-function ProtectedRoute({isAuth: isAuth, component: Component, ...rest}) {
+function ProtectedRoute({token: token, component: Component, ...rest}) {
     return (<Route {...rest} render = {(props) => {
-   if (isAuth) {
+   if (token) {
        return <Component />
    } else {
        return ( <Redirect to = { {pathname: '/', state: {from: props.location}} }/> )
