@@ -64,7 +64,7 @@ const Sign = ({ currentId }) => {
                 <div className = "col">
                   <label>Password</label>
                   <input
-                    type = "text"
+                    type = "password"
                     required="true"
                     className = "form-control"
                      value = {userData.password}
@@ -147,7 +147,7 @@ const Sign = ({ currentId }) => {
                 <div className = "col">
                   <label>Password</label>
                   <input
-                    type = "text"
+                    type = "password"
                     required="true"
                     className = "form-control"
                      value = {savedUserData.password}

@@ -1,11 +1,11 @@
 import React from 'react';
 import addItems from './AddItems';
 // import  Item from './Item/Item';
+import {withRouter} from 'react-router-dom';
 
 
 
-
-// we need to feach the data from the globle redux store using selectors 
+// we need to feach the data from the redux store using selectors 
 import {useSelector} from 'react-redux';
 
 const ListItems =() =>{
@@ -19,4 +19,4 @@ const ListItems =() =>{
       </>
     );
 }
-export default ListItems;
+export default withRouter(ListItems);

@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { createOrder } from '../../actions/index';
 // import FileBase from 'react-file-base64';
 // import { reducers }   from '../../reducers/index';
+import {withRouter} from 'react-router-dom';
 
 const AddItems = ({ currentId }) => {
     const [orderData, setOrderData] = useState({  category: '', quantity: '', weight: '', description: ''});
@@ -105,4 +106,4 @@ const AddItems = ({ currentId }) => {
     )
     
 }
-export default AddItems;
+export default withRouter(AddItems);

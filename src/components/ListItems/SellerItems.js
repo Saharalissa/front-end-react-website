@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { getALLItems } from '../../actions';
 import { useDispatch,useSelector } from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 const SellerItems =() =>{
     const dispatch = useDispatch();
@@ -37,4 +38,4 @@ const SellerItems =() =>{
 
 }
 
-export default SellerItems;
+export default withRouter(SellerItems);
