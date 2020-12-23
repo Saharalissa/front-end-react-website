@@ -39,11 +39,12 @@ export const getALLItems = () => async (dispatch) => {
     } catch (error) {
       if (!user.username || !user.email || !user.password || !user.phoneNumber || !user.location || !user.image) {
         alert ("please fill all required feilds")
-      } else {
-        console.log(error.message);
-      alert('email already exists') 
       }
-      
+     else {
+      console.log(user);
+      alert("email already exist");
+     } 
+    
     }
   };
   
@@ -71,7 +72,6 @@ export const getALLItems = () => async (dispatch) => {
     }
   };
 
-
   // getting the admin info
 export const getAdmin = () => async (dispatch) => {
   try {
@@ -94,3 +94,4 @@ export const getUser = () => async (dispatch) => {
     console.log(error.message);
   }
 };
+
