@@ -28,22 +28,24 @@ function App() {
  
   console.log(localStorage.getItem('token'))
   const [token, setToken] = useState(localStorage.getItem('token'));
-  // const [clear, setClearToken] = useState(localStorage.removeItem('token'));
+  const [id, setID] = useState(localStorage.getItem('user_id'));
 
   return (
     <div>
       
       <Router className="container">
       <div>
-        <Route path="/" component={Homepage} />
-        <ProtectedRoute path="/SellerItems" component={SellerItems} token = {token}/>
-        <ProtectedRoute path="/AdminItems" component={AdminItems} />
-        <Route path = "/AdminProfile"  component = {AdminProfile} />
-        <ProtectedRoute path="/SellerProfile" component={SellerProfile} token = {token}/>
-        <ProtectedRoute path = "/AddItems" component = {AddItems} token = {token}/>
-        <Route path="/sign" exact component={Sign} />
-        
-    
+      <Router className="container">
+    <div>
+      <Route path="/" component={Homepage} />
+      <ProtectedRoute path="/SellerItems" component={SellerItems} token = {token}/>
+      <ProtectedRoute path="/AdminItems" component={AdminItems} token = {token} id={1}/>
+      <ProtectedRoute path = "/AdminProfile"  component = {AdminProfile} token = {token} id={1}/>
+      <ProtectedRoute path="/SellerProfile" component={SellerProfile} token = {token} />
+      <ProtectedRoute path = "/AddItems" component = {AddItems} token = {token} />
+      <Route path="/sign" exact component={Sign}/>
+    </div>
+  </Router>
       </div>
      
     </Router>

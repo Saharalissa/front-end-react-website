@@ -22,7 +22,7 @@ export default class Navbar extends Component {
     <Link to="/AddItems"> Add Items </Link>
     <Link to="/AdminProfile"> Admin Profile </Link>
     <Link to="/SellerProfile"> Seller Profile </Link>
-    <Link to="/" onClick={() => {localStorage.removeItem('token'); window.location.reload()}}> Sign out </Link>
+    <Link to="/" onClick={() => {localStorage.removeItem('token'); localStorage.removeItem('user_id'); window.location.reload()}}> Sign out </Link>
     
     </nav>
     </div>
