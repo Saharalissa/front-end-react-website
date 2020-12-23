@@ -53,7 +53,7 @@ const Sign = ({ currentId }) => {
                 <label>Email</label>
                 <input
                 required="true"
-                  type = "text"
+                  type = "email"
                   className = "form-control"
                    value = {userData.email}
                   onChange = {(e) => setUserData({ ...userData ,email : e.target.value})}
@@ -136,7 +136,7 @@ const Sign = ({ currentId }) => {
                 <label>Email</label>
                 <input
                 required="true"
-                  type = "text"
+                  type = "email"
                   className = "form-control"
                    value = {savedUserData.email}
                   onChange = {(e) => setSavedUserData({ ...savedUserData ,email : e.target.value})}
