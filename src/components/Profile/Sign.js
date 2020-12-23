@@ -40,7 +40,7 @@ const Sign = ({ currentId }) => {
                 <div className="col">
                 <label>Username</label>
                 <input
-                required="true"
+                required={true}
                   type = "text"
                   className = "form-control"
                    value = {userData.username}
@@ -52,7 +52,7 @@ const Sign = ({ currentId }) => {
                 <div className="col">
                 <label>Email</label>
                 <input
-                required="true"
+                required={true}
                   type = "email"
                   className = "form-control"
                    value = {userData.email}
@@ -65,7 +65,7 @@ const Sign = ({ currentId }) => {
                   <label>Password</label>
                   <input
                     type = "password"
-                    required="true"
+                    required={true}
                     className = "form-control"
                      value = {userData.password}
                   onChange = {(e) => setUserData({ ...userData ,password : e.target.value})}
@@ -75,7 +75,7 @@ const Sign = ({ currentId }) => {
                 <div className="col">
                 <label>Phone Number</label>
                 <input
-                required="true"
+                required={true}
                   type = "text"
                   className = "form-control"
                    value = {userData.phoneNumber}
@@ -87,7 +87,7 @@ const Sign = ({ currentId }) => {
               <div className="col">
                 <label>Location</label>
                 <input
-                required="true"
+                required={true}
                   type = "text"
                   className = "form-control"
                    value = {userData.location}
@@ -99,7 +99,7 @@ const Sign = ({ currentId }) => {
                 <div className="col">
                 <label>image</label>
                 <input
-                required="true"
+                required={true}
                   type = "text"
                   className = "form-control"
                    value = {userData.image}
@@ -111,7 +111,7 @@ const Sign = ({ currentId }) => {
                 <div className="col">
                 <label>iBan</label>
                 <input
-                required="true"
+                required={true}
                   type = "text"
                   className = "form-control"
                    value = {userData.iBan}
@@ -135,7 +135,7 @@ const Sign = ({ currentId }) => {
                 <div className="col">
                 <label>Email</label>
                 <input
-                required="true"
+                required={true}
                   type = "email"
                   className = "form-control"
                    value = {savedUserData.email}
@@ -148,7 +148,7 @@ const Sign = ({ currentId }) => {
                   <label>Password</label>
                   <input
                     type = "password"
-                    required="true"
+                    required={true}
                     className = "form-control"
                      value = {savedUserData.password}
                   onChange = {(e) => setSavedUserData({ ...savedUserData ,password : e.target.value})}

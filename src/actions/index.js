@@ -37,8 +37,13 @@ export const getALLItems = () => async (dispatch) => {
       console.log("DISPATCH(ADD) : ", dispatch({ type: "ADD", payload: user}))
       alert('Congrats, you are registered successfully, you can login now')
     } catch (error) {
-      console.log(error.message);
+      if (!user.username || !user.email || !user.password || !user.phoneNumber || !user.location || !user.image) {
+        alert ("please fill all required feilds")
+      } else {
+        console.log(error.message);
       alert('email already exists') 
+      }
+      
     }
   };
   
@@ -54,9 +59,38 @@ export const getALLItems = () => async (dispatch) => {
         // localStorage.setItem('isAuth', data.auth);
         window.location = '/';
         console.log(data)
+   
       // console.log(saveduser)
     } catch (error) {
       console.log(error.message);
-      alert("email or password is incorrect");
+      // console.log(saveduser.email);
+       if (!saveduser.email || !saveduser.password) {
+        alert("email or password is empty");
+      }
+      else {alert("email or password is incorrect")};
     }
   };
+
+
+  // getting the admin info
+export const getAdmin = () => async (dispatch) => {
+  try {
+    const {data} = await api.AdminProfile();
+
+    dispatch({ type: 'AdminInfo', payload: data });
+  
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const getUser = () => async (dispatch) => {
+  try {
+    const {data} = await api.UserProfile();
+      
+    dispatch({ type: 'UserInfo', payload: data });
+  
+  } catch (error) {
+    console.log(error.message);
+  }
+};

@@ -16,7 +16,6 @@ export default class Navbar extends Component {
     <div>
     <nav>
     <Link to="/" > DAWERHA </Link>
-
     <Link to="/SellerItems"> seller Items</Link>
     <Link to="/sign" >sign in</Link>
     <Link to="/AdminItems"> Admin Items </Link>
@@ -24,7 +23,6 @@ export default class Navbar extends Component {
     <Link to="/AdminProfile"> Admin Profile </Link>
     <Link to="/SellerProfile"> Seller Profile </Link>
     <Link to="/" onClick={() => {localStorage.removeItem('token'); window.location.reload()}}> Sign out </Link>
-
     
     </nav>
     </div>
