@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { createUser } from '../../actions/index';
 import { checkUser } from '../../actions/index';
+
 //Sign up/in component 
 const Sign = ({ currentId }) => {
   ////this is for sign up
@@ -45,9 +46,7 @@ const Sign = ({ currentId }) => {
         e.preventDefault();
           dispatch(checkUser(savedUserData));
           console.log("savedUserData",savedUserData);
-            //  if (!savedUserData.email)  {
-            //   alert("empty email")
-            //  }
+           
       };
     return (
         <div>

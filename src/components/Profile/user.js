@@ -6,6 +6,8 @@ import React, { useEffect} from 'react';
 import { getUser } from '../../actions';
 import { useDispatch,useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
+import ProfileNav from '../Navbar/profileNav';
+
 // we are retreiving all the admin items 
 const UserProfile =() =>{
     // we are dipatching th state
@@ -27,7 +29,7 @@ const UserProfile =() =>{
     
     return (
          <div>
-              
+              <ProfileNav/>
               {UserProfile.filter (Users  => Users.userID === loggedin
          ).map((Info) => (
         <div style={{ border: '1px solid black', margin: "6px" }} >

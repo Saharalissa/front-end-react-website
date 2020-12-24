@@ -55,10 +55,11 @@ export const getALLItems = () => async (dispatch) => {
       dispatch({ type: "CHECK", payload: data});
       console.log("DISPATCH(CHECK) : ", dispatch({ type: "CHECK", payload: data}));
       console.log(data)
+
         localStorage.setItem('token', data.token)
         localStorage.setItem('user_id',data.result[0].userID)
         // localStorage.setItem('isAuth', data.auth);
-        window.location = '/';
+        window.location = '/home';
         console.log(data)
    
       // console.log(saveduser)

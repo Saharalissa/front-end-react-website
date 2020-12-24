@@ -5,6 +5,7 @@ import { createOrder } from '../../actions/index';
 // import FileBase from 'react-file-base64';
 // import { reducers }   from '../../reducers/index';
 import {withRouter} from 'react-router-dom';
+import AddNav from '../Navbar/addNav';
 
 const AddItems = ({ currentId }) => {
     const [orderData, setOrderData] = useState({  category: '', quantity: '', weight: '', description: ''});
@@ -25,6 +26,7 @@ const AddItems = ({ currentId }) => {
       };
     return (
         <div>
+          <AddNav/>
         <h1>Form</h1>
         <br />
         <div className = "container">

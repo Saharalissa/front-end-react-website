@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { getALLItems } from '../../actions';
 import { useDispatch,useSelector } from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import ItemsNav from '../Navbar/itemsNav';
 
 const SellerItems =() =>{
     const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const SellerItems =() =>{
     return (
 
 <div>
+  <ItemsNav/>
           {orders.map((post) => (
         <div style={{ border: '1px solid black', margin: "6px" }} >
 
