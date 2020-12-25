@@ -59,7 +59,12 @@ export const getALLItems = () => async (dispatch) => {
         localStorage.setItem('token', data.token)
         localStorage.setItem('user_id',data.result[0].userID)
         // localStorage.setItem('isAuth', data.auth);
-        window.location = '/home';
+        if (data.result[0].userID === 1) {
+          window.location = 'AdminProfile';
+        } else {
+           window.location = '/home';
+        }
+       
         console.log(data)
    
       // console.log(saveduser)

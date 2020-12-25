@@ -7,6 +7,7 @@ import { getUser } from '../../actions';
 import { useDispatch,useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import ProfileNav from '../Navbar/profileNav';
+import authInReducer from '../../reducers/authInReducer';
 
 // we are retreiving all the admin items 
 const UserProfile =() =>{
