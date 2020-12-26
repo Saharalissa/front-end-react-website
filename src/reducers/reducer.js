@@ -4,10 +4,14 @@
        return action.payload;
        case "CREATE":
       return [...state, action.payload];
-        default:
+      case "UPDATE":
+      return action.payload;
+      case "DELETE":
+       
+      default:
         return state;
+
     }
   };
 
   export default Items;
-

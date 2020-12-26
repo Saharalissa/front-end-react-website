@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { getAdmin } from '../../actions';
 import { useDispatch,useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
-import AdminNav from '../Navbar/adminNav';
-
+import AdminNav from '../Navbar/adminNav'
 // we are retreiving all the admin items 
 const AdminProfile =() =>{
     // we are dipatching th state

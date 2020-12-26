@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // import Navbar from '../Navbar/navbar';
-
 export default class Viewpage extends Component {
   constructor(props) {
     super(props);
