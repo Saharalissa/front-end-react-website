@@ -8,7 +8,14 @@ export const createOrder = (newOrder) => axios.post(url+ '/items', newOrder);
 export const AdminProfile = () => axios.get(url+'/AdminUser' );
 //getting the user profile
 export const UserProfile = () => axios.get(url + '/UserProfile' );
+//updating the item
 export const updateOrder = (id, updateOrder) => axios.put(`${url}/items/${id}`, updateOrder);
+//deleting the item
 export const deleteOrder = (id) => axios.delete(`${url}/delete/${id}`);
+//creating the new user
 export const createUser = (newUser) => axios.post(url+ '/signup', newUser);
+//checking the user to login 
 export const checkUser = (savedUser) => axios.post(url+ '/signin', savedUser)
+
+export const payPal = (purchaseInfo) => axios.post(url+ '/purchase', purchaseInfo)
+

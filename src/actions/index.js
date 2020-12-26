@@ -128,6 +128,18 @@ export const getPrice = () =>  {
 
 
 
+export const purchaseProcess = (purchaseInfo) => async (dispatch) => {
+  try {
+    const {data} = await api.payPal(purchaseInfo);
+    
+    dispatch({ type: 'PURCHASE', payload: data });
+    console.log("DISPATCH(ADD) : ", purchaseInfo )
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+
 
 
 

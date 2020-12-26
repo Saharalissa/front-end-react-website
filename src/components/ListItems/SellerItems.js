@@ -45,7 +45,10 @@ const SellerItems =({currentId}) =>{
         <br></br>
         description:{post.description}
         <br></br>
+
         image:<img src = {post.image}/>
+
+        image:{post.image}
 
 
         <div>
