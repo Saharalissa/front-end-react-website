@@ -9,9 +9,9 @@ import {withRouter} from 'react-router-dom';
 
 var Total
 const AddItems = ({ currentId }) => {
-    const [orderData, setOrderData] = useState({  category: '', quantity: '', weight: '', description: '', price:'',image:null,user_id:localStorage.getItem('user_id') });
+    const [orderData, setOrderData] = useState({  category: '', quantity: '', weight: '', description: '', price:'',image:'',user_id:localStorage.getItem('user_id') });
     const dispatch = useDispatch();
-    const [image, setUserImage] = useState(null)
+    const [image, setUserImage] = useState()
     const onSubmit = async (e) => {
         e.preventDefault();
     
@@ -23,6 +23,7 @@ const AddItems = ({ currentId }) => {
           function handleChangeImage(e){
             e.preventDefault();
               setUserImage( e.target.files[0])
+              console.log(e.target.files[0])
             }
             const imageUpload  = async (e) => {
               const imageLink = storage.ref(`images/${image.name}`).put(image)
@@ -51,8 +52,10 @@ const AddItems = ({ currentId }) => {
     for (var key in priceObj){
       if(category===key)
       var price = priceObj[key]
+      // var price = orderData.price
+      
     }
-    console.log("price:",price)
+    
     // to get the entered Quantity and Weight
     var Quantity=orderData.quantity
     var Weight=orderData.weight
@@ -60,7 +63,7 @@ const AddItems = ({ currentId }) => {
     Total = Weight*price*Quantity
     //add the order price to the orderData object to save it on the database
     orderData.price = Total
-
+    console.log("price:", Total)
        
         
    
@@ -102,7 +105,7 @@ const AddItems = ({ currentId }) => {
                 </div>
                 <br />
                 <div className="col">
-                <label>weight</label>
+                <label>Unit weight</label>
                 <input
                 required="true"
                   type = "text"
@@ -135,7 +138,7 @@ const AddItems = ({ currentId }) => {
                   onChange = {(e) => setOrderData({ ...orderData ,description : e.target.value})}
                     placeholder = " Insert a description "/>
                 </div>
-                Total: {Total}
+                <strong>Enviroment support by the government(JD): {Total}</strong>
                 <br />
                 
               <br />
